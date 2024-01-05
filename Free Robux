@@ -1,0 +1,57 @@
+import time
+import random
+import webbrowser
+
+def rickroll_script():
+    """
+    Welcome to the free robux generator!
+
+    This script simulates a process and then redirects to a Rickroll video.
+    """
+
+    # Ask for a username
+    user_name = input("Please enter your username: ")
+
+    # Ask for a password
+    password = input("Enter the password to access the free robux generator: ")
+
+    # Assume authentication is always successful for this example
+    print("\nAuthentication successful. Generating random phrases...")
+
+    for _ in range(25):
+        print(get_random_phrase())
+        time.sleep(0.1)  # Adjust the delay if needed
+
+    # Rickroll part
+    print("\nRedirecting to a Rickroll video...")
+    rickroll_link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    open_browser(rickroll_link)
+
+def get_random_phrase():
+    """
+    Generate a random phrase for the loading simulation.
+    """
+    phrases = [
+        "Processing...",
+        "Analyzing data...",
+        "Executing algorithm...",
+        "Generating content...",
+        "Randomizing variables...",
+        "Optimizing code...",
+        "Loading magic...",
+        "Summoning unicorns...",
+        "Calculating the meaning of life...",
+        "Simulating a black hole...",
+    ]
+    return random.choice(phrases)
+
+def open_browser(link):
+    """
+    Open a web browser to the specified link.
+    """
+    try:
+        webbrowser.open(link, new=2)
+    except Exception as e:
+        print(f"Error opening web browser: {e}")
+
+# Run the script
